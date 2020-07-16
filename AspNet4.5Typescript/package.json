@@ -1,0 +1,48 @@
+{
+  "name": "AspNet4.5Typescript",
+  "private": true,
+  "version": "1.0.0",
+  "watch": {
+    "test": {
+      "extensions": "ts, tsx, js"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
+    "@types/history": "4.6.0",
+    "@types/hookrouter": "2.2.2",
+    "@types/react": "16.9.31",
+    "@types/react-dom": "16.9.6",
+    "@types/react-router": "4.0.12",
+    "@types/react-router-dom": "4.0.5",
+    "@types/webpack-env": "1.13.0",
+    "aspnet-webpack": "^2.0.1",
+    "aspnet-webpack-react": "^3.0.0",
+    "awesome-typescript-loader": "3.2.1",
+    "babel-loader": "^8.1.0",
+    "bootstrap": "3.3.7",
+    "css-loader": "0.28.4",
+    "event-source-polyfill": "0.0.9",
+    "extract-text-webpack-plugin": "2.1.2",
+    "file-loader": "0.11.2",
+    "hookrouter": "1.2.3",
+    "isomorphic-fetch": "2.2.1",
+    "jquery": "^3.5.1",
+    "json-loader": "0.5.4",
+    "npm-watch": "^0.6.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.2.0",
+    "style-loader": "0.18.2",
+    "typescript": "3.8.3",
+    "url-loader": "0.5.9",
+    "webpack": "2.5.1",
+    "webpack-hot-middleware": "2.18.2"
+  },
+  "scripts": {
+    "build": "webpack --config=webpack.config.js",
+    "watch": "node \".\\watcher.js\""
+  }
+}
