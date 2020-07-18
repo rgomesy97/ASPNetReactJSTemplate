@@ -1,12 +1,9 @@
 ﻿const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
-const bundleOutputDir = './dist';
 
 module.exports = (env) => {
     const isDevBuild = !(env && env.prod);
     return [{
+        mode: 'development',
         stats: { modules: false },
         entry: {
             index: "./Scripts/src/app.js",
@@ -16,6 +13,7 @@ module.exports = (env) => {
             path: path.resolve(__dirname, "./dist"),
             filename: "[name].js"
         },
+        devtool: 'sourcemap',
         module: {
         rules: [
             {

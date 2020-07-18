@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    ViewBag.Title = "4.5Typescript";
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,9 +15,10 @@
     </script>
 
     @Styles.Render("~/bundles/coreCSS")
-    @Scripts.Render("~/bundles/coreJS")
 </head>
 <body>
     @RenderBody()
+
+    @Scripts.Render("~/bundles/coreJS")
 </body>
 </html>
