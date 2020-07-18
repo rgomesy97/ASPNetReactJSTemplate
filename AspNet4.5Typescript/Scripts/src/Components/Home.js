@@ -1,7 +1,7 @@
 import * as React from "react";
-export var Home = function (props) {
-    var _a = React.useState(props.firstName + ' ' + props.surname), name = _a[0], setName = _a[1], _b = React.useState(""), textboxName = _b[0], setTextBoxName = _b[1];
-    var handleSubmit = function (e) {
+export const Home = (props) => {
+    const [name, setName] = React.useState(props.firstName + ' ' + props.surname), [textboxName, setTextBoxName] = React.useState("");
+    const handleSubmit = (e) => {
         e.preventDefault();
         setName(textboxName);
         setTextBoxName("");
@@ -14,7 +14,7 @@ export var Home = function (props) {
             props.surname,
             "!"),
         React.createElement("form", { onSubmit: handleSubmit },
-            React.createElement("input", { type: "text", className: "input", value: textboxName, placeholder: "Add a new task", onChange: function (e) { return setTextBoxName(e.target.value); } })),
+            React.createElement("input", { type: "text", className: "input", value: textboxName, placeholder: "Add a new task", onChange: e => setTextBoxName(e.target.value) })),
         React.createElement("p", null,
             "My new name is: ",
             name)));

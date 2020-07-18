@@ -86,10 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./Scripts/src/Components/About.js":
-/*!*****************************************!*\
-  !*** ./Scripts/src/Components/About.js ***!
-  \*****************************************/
+/***/ "./Scripts/src/Components/About.tsx":
+/*!******************************************!*\
+  !*** ./Scripts/src/Components/About.tsx ***!
+  \******************************************/
 /*! exports provided: About */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -99,16 +99,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-var About = function () {
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, "Hello test2!");
+const About = () => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, "Hello test2!");
 };
 
 /***/ }),
 
-/***/ "./Scripts/src/Components/Home.js":
-/*!****************************************!*\
-  !*** ./Scripts/src/Components/Home.js ***!
-  \****************************************/
+/***/ "./Scripts/src/Components/Home.tsx":
+/*!*****************************************!*\
+  !*** ./Scripts/src/Components/Home.tsx ***!
+  \*****************************************/
 /*! exports provided: Home */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -118,31 +118,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
-var Home = function (props) {
-  var _a = react__WEBPACK_IMPORTED_MODULE_0__["useState"](props.firstName + ' ' + props.surname),
-      name = _a[0],
-      setName = _a[1],
-      _b = react__WEBPACK_IMPORTED_MODULE_0__["useState"](""),
-      textboxName = _b[0],
-      setTextBoxName = _b[1];
+const Home = props => {
+  const [name, setName] = react__WEBPACK_IMPORTED_MODULE_0__["useState"](props.firstName + ' ' + props.surname),
+        [textboxName, setTextBoxName] = react__WEBPACK_IMPORTED_MODULE_0__["useState"]("");
 
-  var handleSubmit = function (e) {
+  const handleSubmit = e => {
     e.preventDefault();
     setName(textboxName);
     setTextBoxName("");
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, "My initial name is ", props.firstName, " ", props.surname, "!"), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("form", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("h1", null, "My initial name is ", props.firstName, " ", props.surname, "!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("form", {
     onSubmit: handleSubmit
-  }, react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("input", {
     type: "text",
     className: "input",
     value: textboxName,
     placeholder: "Add a new task",
-    onChange: function (e) {
-      return setTextBoxName(e.target.value);
-    }
-  })), react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "My new name is: ", name));
+    onChange: e => setTextBoxName(e.target.value)
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("p", null, "My new name is: ", name));
 };
 
 /***/ }),
@@ -162,7 +156,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var hookrouter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! hookrouter */ "./node_modules/hookrouter/dist/index.js");
 /* harmony import */ var hookrouter__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(hookrouter__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes */ "./Scripts/src/routes.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes */ "./Scripts/src/routes.tsx");
 
 
 
@@ -177,10 +171,10 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__["render"]( /*#__PURE__*/react__WEBPACK_IM
 
 /***/ }),
 
-/***/ "./Scripts/src/routes.js":
-/*!*******************************!*\
-  !*** ./Scripts/src/routes.js ***!
-  \*******************************/
+/***/ "./Scripts/src/routes.tsx":
+/*!********************************!*\
+  !*** ./Scripts/src/routes.tsx ***!
+  \********************************/
 /*! exports provided: routes */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -189,21 +183,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Components_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Components/Home */ "./Scripts/src/Components/Home.js");
-/* harmony import */ var _Components_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Components/About */ "./Scripts/src/Components/About.js");
+/* harmony import */ var _Components_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Components/Home */ "./Scripts/src/Components/Home.tsx");
+/* harmony import */ var _Components_About__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Components/About */ "./Scripts/src/Components/About.tsx");
 
 
 
-var routes = {
-  "/": function () {
-    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Home__WEBPACK_IMPORTED_MODULE_1__["Home"], {
-      firstName: "Ryan",
-      surname: "Test"
-    });
-  },
-  "/Home/Home2": function () {
-    return react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_About__WEBPACK_IMPORTED_MODULE_2__["About"], null);
-  }
+const routes = {
+  "/": () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_Home__WEBPACK_IMPORTED_MODULE_1__["Home"], {
+    firstName: `Ryan`,
+    surname: `Test`
+  }),
+  "/Home/Home2": () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Components_About__WEBPACK_IMPORTED_MODULE_2__["About"], null)
 };
 
 /***/ }),
